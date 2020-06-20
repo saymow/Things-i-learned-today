@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,400;1,700&display=swap');
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #130f0d;
+  color: #fff;
+}
+
+.boards {
+  display: flex;
+  margin-top: 32px;
+}
+
+.board {
+  background-color: #141316;
+  border: 1px solid #FD951F11;
+  border-radius: 4px;
+  margin: 0 16px;
+}
+
+.board  h3{
+  padding: 16px;
+  margin: 0px;
+  color: #fd951fcc;
+}
+
+.dropzone {
+  padding: 16px;
+  min-width: 282px;
+  min-height: 200px;
+  transition: background 300ms ease-in-out;
+}
+
+.card {
+  padding: 16px;
+  box-shadow: 0 2px 2px -1px #fd951fcc;
+  width: 250px;
+  margin: 25px 0;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  background: #121213;
+}
+
+.status {
+  width: 22px;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.green {
+  border-color: #00f00055;
+}
+
+.blue {
+  border-color: #0000ff55;
+}
+
+.red {
+  border-color: #ff000055;
+}
+
+.selectedDropzone {
+  background: #0ff00555;
+}
+
+.unselectedDropzone {
+  background-color: #ff000055;
+}
+
+.isDraging {
+  cursor: grab;
+  opacity: .5;
+}
