@@ -1,0 +1,95 @@
+body {
+  font-size: 62.5%;
+  height: 100vh;
+  background-color: #151615;
+  overflow: hidden;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+form {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 3rem;
+
+  background-color: #131313;
+  margin: 6rem auto;
+  border-radius: .5rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.input input {
+  font-size: 1.6rem;
+  padding: 1.5rem .6rem .6rem .6rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #777;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  font-size: 1.1rem;
+  left: 0;
+  transform: translateY(30px);
+  transition: all 200ms ease;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(0);
+  font-size: .8rem;
+  color: #777;
+}
+
+form button {
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: .5rem .25rem;
+  border-radius: .2rem;
+  margin-top: 2rem;
+  width: 100%;
+  background-color: #777;
+  transition: all 200ms ease;
+}
+
+form button:hover {
+  opacity: .8;
+}
+
+.input span.error {
+  font-size: .8rem;
+
+  display: flex;
+  
+  padding: 0;
+
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.input span.error.active {
+  border: 1px solid red;
+  padding: 0.4em;
+}
