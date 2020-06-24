@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.App div {
+  margin: 0 5rem;
+}
