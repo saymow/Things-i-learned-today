@@ -1,10 +1,12 @@
 import { Request, Response } from "express";
-import { QueryBuilder } from "Knex";
+import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
+import config from "../config/auth.json";
 import knex from "../database/connections";
 
 interface User {
+  id: number;
   name: string;
   email: string;
   password_hash: string;
@@ -23,16 +25,23 @@ class SessionController {
       user.password_hash
     );
 
-      // 1:04:21
-
     if (!passwordIsCorrect)
       return res.status(401).json({ message: "Invalid password." });
 
     return res.status(200).json({
       name: user.name,
       email: user.email,
+      token: generateToken({
+        id: user.id,
+      }),
     });
   }
+}
+
+function generateToken(params: {}) {
+  return jwt.sign(params, config.secret, {
+    expiresIn: 8640,
+  });
 }
 
 export default new SessionController();

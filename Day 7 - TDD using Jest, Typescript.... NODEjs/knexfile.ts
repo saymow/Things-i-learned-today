@@ -13,6 +13,7 @@ const config = {
   migrations: {
     directory: path.resolve(__dirname, "src", "database", "migrations"),
   },
+  useNullAsDefault: true
 };
 
 export const { client, connection, migrations } = config;
