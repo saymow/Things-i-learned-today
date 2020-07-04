@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 5rem auto;
+  background-color: #fff;
+  min-height: 460px;
+}
+
+#progress-mock {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 99;
+}
+
+#progress-bar {
+  height: 10px;
+  background-color: #0f0;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb;
+  display: none;
+}
+
+#buttons-div {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.rounderedCheckPoint {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #0f0;
+  position: absolute;
+  display: none;
+}
+
+.appear {
+  display: block;
+}
