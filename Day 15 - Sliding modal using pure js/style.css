@@ -1,0 +1,39 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  background-color: #fff;
+  width: 100%;
+  max-width: 640px;
+  min-height: 320px;
+  z-index: 99;
+  transition: transform 200ms ease;
+}
+
+.show {
+  visibility: visible;
+}
+
+.show .content {
+  transform: translate(-50%, -50%);
+}
