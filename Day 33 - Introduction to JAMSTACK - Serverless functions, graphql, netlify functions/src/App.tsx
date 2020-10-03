@@ -7,7 +7,7 @@ function App() {
 
   async function loadLinks() {
     try {
-      const response = await fetch("/api/getLinks");
+      const response = await fetch("/.netlify/functions/getLinks");
       const links = await response.json();
 
       console.log(links);

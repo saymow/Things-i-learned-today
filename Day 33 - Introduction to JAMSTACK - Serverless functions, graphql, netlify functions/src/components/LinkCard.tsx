@@ -10,7 +10,7 @@ const LinkCard: React.FC<{ link: Link; refresh: refreshLinks }> = ({
     link.archived = !link.archived;
 
     try {
-      await fetch("/api/updateLink", {
+      await fetch("/.netlify/functions/updateLink", {
         method: "PUT",
         body: JSON.stringify(link),
       });
@@ -22,7 +22,7 @@ const LinkCard: React.FC<{ link: Link; refresh: refreshLinks }> = ({
 
   const deleteLink = async (_id: string) => {
     try {
-      await fetch("/api/deleteLink", {
+      await fetch("/.netlify/functions/deleteLink", {
         method: "PUT",
         body: JSON.stringify({ _id }),
       });

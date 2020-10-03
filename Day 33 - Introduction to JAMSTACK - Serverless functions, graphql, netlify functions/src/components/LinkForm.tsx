@@ -22,7 +22,7 @@ const LinkForm: React.FC<{ refresh: refreshLinks }> = ({ refresh }) => {
     event.preventDefault();
 
     try {
-      await fetch("/api/createLink", {
+      await fetch("/.netlify/functions/createLink", {
         method: "POST",
         body: JSON.stringify(form),
       });
