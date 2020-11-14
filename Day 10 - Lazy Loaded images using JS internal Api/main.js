@@ -14,23 +14,23 @@ const targets = document.querySelectorAll("img");
 //   })
 // })
 
-const lazyLoad = target => {
+const lazyLoad = (target) => {
   const io = new IntersectionObserver((entries, observer) => {
-    entries.map(entry => {
+    entries.map((entry) => {
       if (entry.isIntersecting) {
         console.log("good");
         const img = entry.target;
-        
-        const src = img.getAttribute("data-lazy");
+        const src = img.getAttrib;
+        ute("data-lazy");
         img.setAttribute("src", src);
         img.classList.add("fade");
 
         observer.disconnect();
       }
-    })
-  })
+    });
+  });
 
   io.observe(target);
-}
+};
 
-targets.forEach(target => lazyLoad(target));
+targets.forEach((target) => lazyLoad(target));

@@ -14,7 +14,6 @@ function nextImage() {
 }
 
 (function start() {
-  console.log("Tes");
   setInterval(() => {
     nextImage();
   }, time);
