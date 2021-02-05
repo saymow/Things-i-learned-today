@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web components</title>
+    <style>
+      body {
+        background: #eee;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 3rem;
+        color: red;
+      }
+
+      #container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Web components practice</h3>
+
+    <div id="container">
+      <my-card title="Dynamic card title" image="https://picsum.photos/200/200">
+        <div slot="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          harum placeat possimus ea! Repudiandae obcaecati placeat quae nihil
+          aspernatur eveniet explicabo praesentium iure quos, esse velit
+          laboriosam dignissimos. Magnam, ut.
+        </div>
+        <div slot="tag">Primeiro, segundo, terceiro</div>
+      </my-card>
+      <my-card
+        title="Dynamic card title 2"
+        image="https://picsum.photos/200/200"
+      >
+        <div slot="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          omnis, cumque nisi excepturi fuga deleniti tenetur sit aut in
+          consequuntur modi voluptatum cum laudantium quidem possimus, optio qui
+          nulla aspernatur.
+        </div>
+        <div slot="tag">Primeiro, segundo.</div>
+      </my-card>
+      <my-card
+        title="Dynamic card title 3"
+        image="https://picsum.photos/200/200"
+      >
+        <div slot="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          repudiandae soluta voluptates odit repellendus expedita iusto quis in,
+          rem possimus omnis officia quo, itaque, ad dolores. Itaque rem
+          molestiae vitae?
+        </div>
+        <div slot="tag">Primeiro...</div>
+      </my-card>
+    </div>
+
+    <script src="card.js"></script>
+  </body>
+</html>
